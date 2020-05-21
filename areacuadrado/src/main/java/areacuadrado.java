@@ -11,7 +11,7 @@ public class areacuadrado {
          Scanner leer=new Scanner(System.in);
          double base,area;
          System.out.print("calcular area   del cuadrado \n");
-         System.out.print("dame un lado del cuadrado \n");
+        
          base=leer.nextInt();
          area=base*base;
          
