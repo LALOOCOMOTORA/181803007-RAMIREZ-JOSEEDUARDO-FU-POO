@@ -1,23 +1,4 @@
-
-import java.util.Scanner;
-
-
-public class edad {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        //jose eduardo ramirez mendoza
-        Scanner leer=new Scanner(System.in);
-         int nacimiento,año=2020,edad;
-         System.out.print("calcular tu edad  \n");
-         System.out.print("ingresa el año del nacimineto \n");
-         nacimiento=leer.nextInt();
-         edad=año-nacimiento;
-         System.out.print("tu edad es: \n"+edad);
-         
-        
-    }
-    
-}
+ import java.util.ResourceBundle; 
+ public class MyLocalizedThrowable extends Throwable { ResourceBundle labels = ResourceBundle.getBundle("loc.exc.test.message"); 
+ private static final long serialVersionUID = 1L; public MyLocalizedThrowable(String messageKey) { super(messageKey); }@Override
+ public String getLocalizedMessage() { return labels.getString(getMessage()); } } 

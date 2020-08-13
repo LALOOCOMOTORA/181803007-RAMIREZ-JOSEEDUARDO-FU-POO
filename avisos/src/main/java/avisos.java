@@ -1,3 +1,6 @@
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -43,6 +46,7 @@ public class avisos {
         aviso2.fechaB="31/03/2020";
         aviso2.status="No Vigente";
         aviso2.tipo="conferencia";
+       
         System.out.println(aviso.toString());
         System.out.println(aviso2.toString());
         

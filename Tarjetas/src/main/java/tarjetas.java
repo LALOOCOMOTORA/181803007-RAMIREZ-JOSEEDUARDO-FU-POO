@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,10 +10,13 @@
 /**
  *
  * @author acteck
+ * 
+ * 
  */
+ 
 public class tarjetas {
 
-    double cuenta;
+    int cuenta;
     String nombre;
     int dia;
     int mes;
@@ -18,11 +24,15 @@ public class tarjetas {
     int cv;
     double monto;
     double apartado;
+    int tarjetav=0;
+    int tarjetacv=0;
+    int nip=0;
+    
 
     public tarjetas() {
     }
 
-    public tarjetas(double cuenta, String nombre, int dia, int mes, int anio, int cv, double monto, double apartado) {
+    public tarjetas(int cuenta, String nombre, int dia, int mes, int anio, int cv, double monto, double apartado) {
         this.cuenta = cuenta;
         this.nombre = nombre;
         this.dia = dia;
@@ -52,22 +62,56 @@ public class tarjetas {
         
         }
     }   
-        
+
     public void deposito(double monto){
         this.monto+=monto;
     }
-   
-    public void retiro(double monto){
-        this.monto-=monto;
-    }
-   
 
+    public void retiro(double monto){
+        if(this.monto<monto){
+          System.out.println("no cuentas con suficiente saldo para retirar");
+        }
+        else{
+        System.out.println("retiro exitoso");
+        this.monto-=monto;
+        }
+        }
+        
+public void crear(double apartado){
     
+     
+    
+        this.apartado+=apartado;
+        this.monto-=apartado;
+    }
+public void eli(){
+        this.monto+=this.apartado;    
+        this.apartado=0;
+    }
+
+public void virtual(int nip){
+     Random  rnd = new Random();
+    this.tarjetav+=(int)(rnd.nextDouble() * 1000000000 + 999999999);
+    this.tarjetav+=(int)(rnd.nextDouble() * 1111 + 9999);
+    
+    this.tarjetacv=this.cv;
+    this.nip+=nip;
+    
+      
+}
+
+
 
     @Override
     public String toString() {
-        return "tarjetas{" + "cuenta=" + cuenta + "\n nombre=" + nombre + "\n fecha de vencimiento=" + dia + "/" + mes + "/" + anio + "\n cv=" + cv + "\n monto=" + monto + "\n apartado=" + apartado + "\n total: "+this.total() + '}';
-    }
+        if(this.tarjetacv==0){
+        return "tarjetas{" + "cuenta=" + cuenta + "\n nombre=" + nombre + "\n fecha de vencimiento=" + dia + "/" + mes + "/" + anio + "\n cv=" + cv + "\n monto=" + monto + "\n apartado=" + apartado + "\n total: " + this.total() +"\n sin tarjeta virtual";
+        
+        }
+        else{
+        return "tarjetas{" + "cuenta=" + cuenta + "\n nombre=" + nombre + "\n fecha de vencimiento=" + dia + "/" + mes + "/" + anio + "\n cv=" + cv + "\n monto=" + monto + "\n apartado=" + apartado + "\n total: " + this.total() +"\n tarjeta virtual: "+tarjetav+"\n cv de la tarjeta:"+cv+"\n nip:"+nip;    
+        }
+        }
 
    
 

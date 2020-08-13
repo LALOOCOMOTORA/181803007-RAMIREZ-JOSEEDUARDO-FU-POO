@@ -1,3 +1,11 @@
+
+
+
+import Personaje.Personaje;
+import java.util.Scanner;
+import Personaje.*;
+import Armas.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,52 +16,39 @@
  *
  * @author acteck
  */
-public class juego {
+public class juegoMain {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ak bronce= new Ak();
-        bronce.tipo="bronce";
-        bronce.cargador=5;
-        bronce.presicion=75;
-        bronce.velocidadCarga=5;
-        bronce.precio=1000;
-        bronce.daño=10;
-        bronce.VelocidadDisparo=10;
-        
-        Ak plata= new Ak();
-        plata.tipo="plata";
-        plata.cargador=8;
-        plata.presicion=70;
-        plata.velocidadCarga=4.5;
-        plata.precio=2300;
-        plata.daño=11;
-        plata.VelocidadDisparo=9.8;
-        
-        Ak oro= new Ak();
-        oro.tipo="oro";
-        oro.cargador=5;
-        oro.presicion=75;
-        oro.velocidadCarga=5;
-        oro.precio=1000;
-        oro.daño=10;
-        oro.VelocidadDisparo=9.4;
-        Ak diamante= new Ak();
-        diamante.tipo="diamante";
-        diamante.cargador=20;
-        diamante.presicion=95;
-        diamante.velocidadCarga=3;
-        diamante.precio=4000;
-        diamante.daño=20;
-        diamante.VelocidadDisparo=8;
-        System.out.println(bronce.toString());
-        System.out.println(plata.toString());
-        System.out.println(oro.toString());
-        System.out.println(diamante.toString());
+       
+    
+       Scanner leer=new Scanner(System.in);
+       Personaje samuel= new Personaje("samuel");
+       System.out.println(samuel.menuAk()); 
+       int valor=leer.nextInt();
+       samuel.equiparArma(valor);
+       System.out.println(samuel);
+       
+      
+       
+    // Ak bronce =new Ak ("bronce",5,65,5,1000,10,20);
+      // Ak plata = new Ak("plata",8,70,4.5,2300,11,9.8);
+      //Ak oro = new Ak("oro",5,75,5,3000,10,9.4);
+      //Ak diamante = new Ak("diamante",20,95,3,4000,20,8);
+     
+     
         // TODO code application logic here
-        
-    }
+
+    
+  
+  
+     
+}
     
 }
+
+
+
+        

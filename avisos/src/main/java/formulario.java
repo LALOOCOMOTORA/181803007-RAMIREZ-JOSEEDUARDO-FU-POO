@@ -1,3 +1,6 @@
+
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,6 +12,8 @@
  * @author acteck
  */
 public class formulario {
+     Date fecha=new Date();
+       
     String matricula;
     String titulo;
     String texto1;
@@ -20,6 +25,7 @@ public class formulario {
     String fechaB;
     String status;
     String tipo;
+   
     int dia;
     int mes;
     int año;

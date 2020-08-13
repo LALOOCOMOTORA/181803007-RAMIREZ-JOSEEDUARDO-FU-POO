@@ -29,5 +29,62 @@ public void Animales(){
         this.nombre = nombre;
         this.tipoAlimento = tipoAlimento;
     }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getHabitad() {
+        return habitad;
+    }
+
+    public void setHabitad(String habitad) {
+        this.habitad = habitad;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getNombreCientifico() {
+        return nombreCientifico;
+    }
+
+    public void setNombreCientifico(String nombreCientifico) {
+        this.nombreCientifico = nombreCientifico;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipoAlimento() {
+        return tipoAlimento;
+    }
+
+    public void setTipoAlimento(String tipoAlimento) {
+        this.tipoAlimento = tipoAlimento;
+    }
+    public String sonidoAnimal(){
+    return "Sin sonido";
+    }
+
+    @Override
+    public String toString() {
+        return "Animales{" + "genero=" + genero + ", habitad=" + habitad + ", edad=" + edad + ", nombreCientifico=" + nombreCientifico + ", nombre=" + nombre + ", tipoAlimento=" + tipoAlimento + '}';
+    }
+    
     
 }
